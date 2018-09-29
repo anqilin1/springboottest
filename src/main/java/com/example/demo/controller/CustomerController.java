@@ -33,4 +33,10 @@ public class CustomerController {
         return ApiResult.ok("获取用户列表", customerRepo.findAll());
     }
 
+    @ApiOperation(value = "获取用户")
+    @GetMapping(value = "getOne")
+    public ApiResult getOne(Integer id) {
+        return ApiResult.ok("获取用户列表", customerRepo.findById(id));
+    }
+
 }

@@ -15,4 +15,6 @@ public interface CustomerRepo extends CrudRepository<Customer, Long> {
 
     List<Customer> findAllByName(String name);
 
+    Customer findById(Integer id);
+
 }
