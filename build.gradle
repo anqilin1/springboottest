@@ -16,8 +16,12 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'com.example'
-version = 'client'
+version = 'consumer'
 sourceCompatibility = 1.8
+
+bootJar {
+	launchScript()
+}
 
 repositories {
 	mavenCentral()
