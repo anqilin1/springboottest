@@ -5,6 +5,10 @@ package com.example.demo.model;
  * restful返回
  */
 public class ApiResult {
+    public ApiResult() {
+
+    }
+
     public ApiResult(Integer code, Object data, String msg) {
         this.code = code;
         this.data = data;

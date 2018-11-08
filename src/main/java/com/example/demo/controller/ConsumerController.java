@@ -19,6 +19,6 @@ public class ConsumerController {
 
     @GetMapping(value = "getCustomerList")
     public ApiResult getCustomerList() {
-        return restTemplate.getForObject("http://demo-client/customer/getList", ApiResult.class);
+        return restTemplate.getForEntity("http://unmanned-container/Usr/loginUsr", ApiResult.class).getBody();
     }
 }
