@@ -17,8 +17,8 @@ public class ConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @GetMapping(value = "getCustomerList")
-    public ApiResult getCustomerList() {
-        return restTemplate.getForEntity("http://unmanned-container/Usr/loginUsr", ApiResult.class).getBody();
+    @GetMapping(value = "loginUsr")
+    public ApiResult loginUsr() {
+        return restTemplate.postForEntity("http://unmanned-container/Usr/loginUsr", null, ApiResult.class).getBody();
     }
 }
